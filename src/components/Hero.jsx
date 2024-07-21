@@ -20,16 +20,16 @@ const Hero = () => {
       
 
       <div className="flex py-4 mb-6 space-x-4 md:space-x-7">
-  <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+  <a href="https://web.facebook.com/isurika.dhananji/" target="_blank" rel="noopener noreferrer">
     <FaFacebook className="text-2xl text-gray-700 hover:text-gray-900" />
   </a>
-  <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+  <a href="https://github.com/Dhananji22" target="_blank" rel="noopener noreferrer">
     <FaGithub className="text-2xl text-gray-700 hover:text-gray-900" />
   </a>
-  <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+  <a href="https://www.linkedin.com/in/isurika-dhananji-06037b224/" target="_blank" rel="noopener noreferrer">
     <FaLinkedin className="text-2xl text-gray-700 hover:text-gray-900" />
   </a>
-  <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+  <a href="https://www.instagram.com/isu_dhananji/?hl=en" target="_blank" rel="noopener noreferrer">
     <FaInstagram className="text-2xl text-gray-700 hover:text-gray-900" />
   </a>
 </div>
