@@ -6,7 +6,10 @@ import javascript from '../assets/javascript.png'
 import mysql from '../assets/mysql.png'
 import postgreSQL from '../assets/PostgresSQL.png'
 import express from '../assets/express.png'
-import typescript from '../assets/TypeScript.png'
+import Selenium from '../assets/Selenium.png'
+import Postman from '../assets/Postman.png'
+import JUnit from '../assets/JUnit.png'
+//import typescript from '../assets/TypeScript.png'
 import { motion } from 'framer-motion'
 
 const iconVarients = (duration) => ({
@@ -52,13 +55,13 @@ const Technologies = () => {
                 <img src={javascript} className='w-16 h-16'/>
             </motion.div>
             
-            <motion.div 
+            {/* <motion.div 
             variants={iconVarients(4.5)}
             initial="initial"
             animate= "animate"
             className='p-2 border-4 rounded-2xl border-neutral-800'>
                 <img src={typescript} className='w-16 h-16'/>
-            </motion.div>
+            </motion.div> */}
             
             <motion.div
             variants={iconVarients(2)}
@@ -90,6 +93,30 @@ const Technologies = () => {
             animate= "animate"
             className='p-2 border-4 rounded-2xl border-neutral-800'>
                 <img src={postgreSQL} className='w-16 h-16'/>
+            </motion.div>
+
+            <motion.div 
+            variants={iconVarients(2.5)}
+            initial="initial"
+            animate= "animate"
+            className='p-2 border-4 rounded-2xl border-neutral-800'>
+                <img src={Selenium} className='w-16 h-16'/>
+            </motion.div>
+
+            <motion.div 
+            variants={iconVarients(3)}
+            initial="initial"
+            animate= "animate"
+            className='p-2 border-4 rounded-2xl border-neutral-800'>
+                <img src={Postman} className='w-16 h-16'/>
+            </motion.div>
+
+            <motion.div 
+            variants={iconVarients(6)}
+            initial="initial"
+            animate= "animate"
+            className='p-2 border-4 rounded-2xl border-neutral-800'>
+                <img src={JUnit} className='w-16 h-16'/>
             </motion.div>
            
         </div>

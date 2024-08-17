@@ -26,7 +26,7 @@ const Contacts = () => {
 
       <div className='flex items-center p-5 space-x-3 text-white bg-gray-800 border-4 shadow-lg rounded-xl'>
         <img src={location} alt="email" className='w-8 h-8 md:h-10 md:w-auto'/>
-      <p>Udugama, Galle</p>
+      <p>Colombo, Sri Lanka</p>
       </div>
       
       </motion.div>

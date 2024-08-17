@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="text-white bg-gray-800">
+    <header className="text-white bg-gray-800 ">
       <div className="container flex items-center justify-between p-4 mx-auto">
         <div className="text-2xl font-bold">My Portfolio</div>
         <nav className="hidden space-x-8 md:flex">

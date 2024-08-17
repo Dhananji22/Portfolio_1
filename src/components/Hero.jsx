@@ -15,8 +15,8 @@ const Hero = () => {
          transition={{ duration: 0.5}}
         className='p-2 text-3xl md:text-6xl'>ISURIKA DHANANJI</motion.h1>
         <h3 className='py-3 text-xl md:text-2xl'>And I'm a</h3>
-        <h2 className='p-2 text-2xl md:text-4xl'>Full-stack developer</h2>
-        <p className='p-3'>Motivated software engineering intern with a passion for technology and a dedication to delivering innovative solutions. Proficient in multiple programming languages and skilled in problem-solving. Eager to leverage my expertise to contribute effectively and make a meaningful impact on projects. </p>
+        <h2 className='p-2 text-2xl md:text-4xl'>quality Assurance Engineer</h2>
+        <p className='p-3'>Motivated QA engineer intern with a strong passion for ensuring software quality and a keen eye for detail. Proficient in various testing methodologies and tools, with a solid foundation in software development. Eager to leverage my analytical skills and dedication to excellence to contribute effectively to your team and ensure the delivery of flawless software solutions.</p>
       
 
       <div className="flex py-4 mb-6 space-x-4 md:space-x-7">
