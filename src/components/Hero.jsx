@@ -1,55 +1,119 @@
-import React from 'react'
-import profile from '../assets/profile.png'
-import { FaFacebook, FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa'
-import { motion } from "framer-motion"
-import CV from '../assets/CV_Isurika.pdf'
+import React from "react";
+import { FaGithub, FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
+import { motion } from "framer-motion";
+import CV from "../assets/CV_Isurika.pdf";
+import profile from "../assets/profile.jpg";
 
 const Hero = () => {
   return (
-    <section className='flex flex-col-reverse justify-between p-5 bg-gray-300 md:flex-row md:px-32 md:py-20'>
-      <div className='mt-10 md:text-left md:w-1/2'>
-        <h3 className='p-2 text-xl md:text-2xl'>Hi, myself</h3>
-        <motion.h1 
-         whileInView={{opacity: 1, x:0}}
-         initial={{opacity: 0, x:-20}}
-         transition={{ duration: 0.5}}
-        className='p-2 text-3xl md:text-6xl'>ISURIKA DHANANJI</motion.h1>
-        <h3 className='py-3 text-xl md:text-2xl'>And I'm a</h3>
-        <h2 className='p-2 text-2xl md:text-4xl'>quality Assurance Engineer</h2>
-        <p className='p-3'>Motivated QA engineer intern with a strong passion for ensuring software quality and a keen eye for detail. Proficient in various testing methodologies and tools, with a solid foundation in software development. Eager to leverage my analytical skills and dedication to excellence to contribute effectively to your team and ensure the delivery of flawless software solutions.</p>
-      
+    // top padding so hero content is not hidden under the fixed dark navbar
+    <section
+      id="home"
+      className="pt-[88px] pb-12 bg-gradient-to-br from-teal-50 via-white to-indigo-50 min-h-[72vh]"
+    >
+      <div className="grid items-center max-w-6xl gap-8 px-6 py-10 mx-auto md:grid-cols-2">
+        {/* Left column: copy */}
+        <div className="space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 text-sm font-semibold text-teal-700 bg-teal-100 rounded-full shadow-sm">
+            QA Engineer
+          </div>
 
-      <div className="flex py-4 mb-6 space-x-4 md:space-x-7">
-  <a href="https://web.facebook.com/isurika.dhananji/" target="_blank" rel="noopener noreferrer">
-    <FaFacebook className="text-2xl text-gray-700 hover:text-gray-900" />
-  </a>
-  <a href="https://github.com/Dhananji22" target="_blank" rel="noopener noreferrer">
-    <FaGithub className="text-2xl text-gray-700 hover:text-gray-900" />
-  </a>
-  <a href="https://www.linkedin.com/in/isurika-dhananji-06037b224/" target="_blank" rel="noopener noreferrer">
-    <FaLinkedin className="text-2xl text-gray-700 hover:text-gray-900" />
-  </a>
-  <a href="https://www.instagram.com/isu_dhananji/?hl=en" target="_blank" rel="noopener noreferrer">
-    <FaInstagram className="text-2xl text-gray-700 hover:text-gray-900" />
-  </a>
-</div>
-<a href={CV} download>
-<button className='px-4 py-2 text-white bg-gray-800 rounded hover:bg-blue-600'>Download CV</button>
-</a>
-</div>
+          <motion.h1
+            initial={{ opacity: 0, x: -18 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl font-extrabold leading-tight md:text-5xl text-slate-900"
+          >
+            Isurika Dhananji
+          </motion.h1>
 
+          <motion.p
+            initial={{ opacity: 0, x: -8 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.08 }}
+            className="max-w-xl text-sm md:text-base text-slate-700"
+          >
+            QA Engineer passionate about quality, automation, and better user
+            experiences. Experienced in manual testing, API validation, and
+            building maintainable test automation that helps teams ship with
+            confidence.
+          </motion.p>
 
-      <div className='flex justify-center md:w-1/2 md:justify-end'>
-        <motion.img 
-        whileInView={{opacity: 1, x:0}}
-        initial={{opacity: 0, x:20}}
-        transition={{ duration: 0.5}}
-        src={profile} className='mt-10 md:px-20 md:h-auto md:w-auto'/>
-        
+          <div className="flex flex-wrap items-center gap-3 mt-3">
+            <a
+              href={CV}
+              download
+              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white rounded-md bg-slate-900 hover:bg-slate-800"
+            >
+              Download CV
+            </a>
+
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium border rounded-md border-slate-900 text-slate-900 hover:bg-slate-50"
+            >
+              Contact Me
+            </a>
+          </div>
+
+          <div className="flex items-center gap-3 mt-4 text-slate-700">
+            <a
+              href="https://github.com/Dhananji22"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+            >
+              <FaGithub className="w-5 h-5 hover:text-slate-900" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/isurika-dhananji-06037b224/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin className="w-5 h-5 hover:text-slate-900" />
+            </a>
+            <a
+              href="https://web.facebook.com/isurika.dhananji/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Facebook"
+            >
+              <FaFacebook className="w-5 h-5 hover:text-slate-900" />
+            </a>
+            <a
+              href="https://www.instagram.com/isu_dhananji/?hl=en"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
+            >
+              <FaInstagram className="w-5 h-5 hover:text-slate-900" />
+            </a>
+          </div>
+        </div>
+
+        {/* Right column: profile card — lighter card to contrast with dark navbar */}
+        <motion.div
+          initial={{ opacity: 0, y: 10, scale: 0.98 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          className="flex justify-center md:justify-end"
+        >
+          <div className="w-[500px] md:w-[400px] p-4 rounded-2xl bg-white shadow-xl ring-1 ring-slate-100">
+            <div className="relative overflow-hidden rounded-xl">
+              <div className="absolute inset-0 bg-gradient-to-br from-teal-400 to-indigo-500 opacity-10" />
+              <img
+                src={profile}
+                alt="Isurika Dhananji"
+                className="object-cover w-full rounded-lg h-100"
+                style={{ objectPosition: "center 10%" }}
+              />
+            </div>
+          </div>
+        </motion.div>
       </div>
-  </section>
-  )
-}
+    </section>
+  );
+};
 
-export default Hero
-
+export default Hero;

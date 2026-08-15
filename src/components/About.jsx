@@ -4,30 +4,52 @@ import { motion } from 'framer-motion';
 
 const About = () => {
   return (
-    <div className='bg-gray-400 border-b'>
-      <h2 className='text-4xl text-center py-14'>About me</h2>
-      <div className='flex flex-col p-5 md:flex-row md:justify-between'>
-        <motion.div 
-        whileInView={{opacity: 1, x:0}}
-        initial={{opacity: 0, x:-20}}
-        transition={{ duration: 0.5}}
-        className='flex justify-center mb-5 md:w-1/2 md:mb-0'>
-          <img src={img} className='w-auto border-4 h-96 rounded-xl' alt='Profile' />
-        </motion.div>
-        
-        <motion.div
-         whileInView={{opacity: 1, x:0}}
-         initial={{opacity: 0, x:20}}
-         transition={{ duration: 0.5}} 
-        className='flex justify-center pr-10 md:w-1/2'>
-          <p className=''>
-          I am a dedicated and passionate QA Engineer Intern with a strong foundation in computer science and a keen interest in ensuring software quality. Currently pursuing my BSc(Hons) in Computing and Information Systems, I have developed a solid understanding of software testing principles and methodologies. My experience includes working on various projects where I have honed my skills in  automated testing, bug tracking, and test case design. <br/><br />
-          
-          I am particularly skilled in using tools like Selenium, JIRA, and Postman, and have a strong understanding of the software development lifecycle (SDLC) and agile methodologies. My goal is to contribute to the delivery of high-quality software solutions by ensuring that every product meets the highest standards of performance and reliability.
-          </p>
-        </motion.div>
+    <section id="about" className="bg-white">
+      <div className="max-w-6xl px-6 py-12 mx-auto">
+        <div className="text-center">
+          <h2 className="text-3xl font-semibold text-slate-900">About</h2>
+          <p className="mt-2 text-sm text-slate-600">A concise summary of who I am and what I do.</p>
+        </div>
+
+        <div className="grid items-center gap-8 mt-8 md:grid-cols-2">
+          <motion.div
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -12 }}
+            transition={{ duration: 0.45 }}
+            className="flex justify-center"
+          >
+            <img src={img} alt="Profile" className="object-cover w-56 h-56 shadow-md rounded-xl" />
+          </motion.div>
+
+          <motion.div
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 12 }}
+            transition={{ duration: 0.45, delay: 0.03 }}
+            className="text-sm text-slate-700"
+          >
+            <p>
+              I’m a QA Engineer passionate about software quality, manual testing, API testing, and test automation. With a background
+              in software development and a strong attention to detail, I enjoy identifying issues early, improving product reliability,
+              and helping teams deliver better user experiences.
+            </p>
+
+            <div className="mt-4">
+              <h3 className="text-sm font-medium text-slate-900">What I do</h3>
+              <ul className="mt-2 space-y-2 text-slate-700">
+                <li>• Manual & exploratory testing — uncover user-impacting defects.</li>
+                <li>• API testing and validation — ensure backend reliability and contract correctness.</li>
+                <li>• Test automation — build maintainable automated checks to prevent regressions.</li>
+              </ul>
+            </div>
+
+            <div className="mt-4">
+              <h3 className="text-sm font-medium text-slate-900">Working style</h3>
+              <p className="text-slate-700">I prioritize clear test plans, reproducible reports, and close collaboration with developers to improve testability.</p>
+            </div>
+          </motion.div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

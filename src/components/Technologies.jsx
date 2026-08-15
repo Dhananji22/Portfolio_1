@@ -1,129 +1,72 @@
-import React from 'react'
-import react from '../assets/react.png'
-import Node from '../assets/Node.png'
-import tailwind from '../assets/tailwind.png'
-import javascript from '../assets/javascript.png'
-import mysql from '../assets/mysql.png'
-import postgreSQL from '../assets/PostgresSQL.png'
-import express from '../assets/express.png'
-import Selenium from '../assets/Selenium.png'
-import Postman from '../assets/Postman.png'
-import JUnit from '../assets/JUnit.png'
-//import typescript from '../assets/TypeScript.png'
-import { motion } from 'framer-motion'
+import React from 'react';
+import { motion } from 'framer-motion';
+import reactImg from '../assets/react.png';
+import nodeImg from '../assets/Node.png';
+import tailwindImg from '../assets/tailwind.png';
+import jsImg from '../assets/javascript.png';
+import mysqlImg from '../assets/mysql.png';
+import expressImg from '../assets/express.png';
+import seleniumImg from '../assets/Selenium.png';
+import postmanImg from '../assets/Postman.png';
+import playwriteImg from '../assets/Playwrite.png';
 
-const iconVarients = (duration) => ({
-    initial: { y: -10},
-    animate: {
-        y: [10, -10],
-        transition: {
-            duration : duration,
-            ease: "linear",
-            repeat: Infinity,
-            repeatType: "reverse",
-        },
-    },
-});
+// import typescriptImg from '../assets/TypeScript.png';
+
+const techs = [
+  { name: 'Selenium', img: seleniumImg, alt: 'Selenium logo' },
+  { name: 'Postman', img: postmanImg, alt: 'Postman logo' },
+  { name: 'Playwrite', img: playwriteImg, alt: 'Playwrite logo' },
+  { name: 'React', img: reactImg, alt: 'React logo' },
+  { name: 'Node.js', img: nodeImg, alt: 'Node.js logo' },
+  { name: 'Tailwind CSS', img: tailwindImg, alt: 'Tailwind CSS logo' },
+  { name: 'JavaScript', img: jsImg, alt: 'JavaScript logo' },
+  { name: 'MySQL', img: mysqlImg, alt: 'MySQL logo' },
+  { name: 'Express', img: expressImg, alt: 'Express logo' },
+  // { name: 'TypeScript', img: typescriptImg, alt: 'TypeScript logo' },
+];
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 8 },
+  visible: (i) => ({ opacity: 1, y: 0, transition: { delay: i * 0.06 } }),
+};
 
 const Technologies = () => {
   return (
-    <div className='p-5 bg-gray-300'>
-        <h2 className='p-5 mt-10 text-4xl text-center'>Technologies</h2>
-        <div className='flex flex-wrap items-center justify-center gap-10 mt-8 mb-10'>
-            
-            <motion.div 
-            variants={iconVarients(2.5)}
-            initial="initial"
-            animate= "animate"
-            className='p-2 border-4 rounded-2xl border-neutral-800'>
-                <img src={react} className='w-16 h-16'/>
-            </motion.div>
-            
-            <motion.div 
-            variants={iconVarients(3)}
-            initial="initial"
-            animate= "animate"
-            className='p-2 border-4 rounded-2xl border-neutral-800'>
-                <img src={Node} className='w-16 h-16'/>
-            </motion.div>
-            
-            <motion.div 
-            variants={iconVarients(6)}
-            initial="initial"
-            animate= "animate"
-            className='p-2 border-4 rounded-2xl border-neutral-800'>
-                <img src={javascript} className='w-16 h-16'/>
-            </motion.div>
-            
-            {/* <motion.div 
-            variants={iconVarients(4.5)}
-            initial="initial"
-            animate= "animate"
-            className='p-2 border-4 rounded-2xl border-neutral-800'>
-                <img src={typescript} className='w-16 h-16'/>
-            </motion.div> */}
-            
-            <motion.div
-            variants={iconVarients(2)}
-            initial="initial"
-            animate= "animate"
-             className='p-2 border-4 rounded-2xl border-neutral-800'>
-                <img src={express} className='w-16 h-16'/>
-            </motion.div>
-            
-            <motion.div
-             variants={iconVarients(7)}
-             initial="initial"
-             animate= "animate"
-            className='p-2 border-4 rounded-2xl border-neutral-800'>
-                <img src={mysql} className='w-16 h-16'/>
-            </motion.div>
-            
-            <motion.div 
-            variants={iconVarients(4)}
-            initial="initial"
-            animate= "animate"
-            className='p-2 border-4 rounded-2xl border-neutral-800'>
-                <img src={tailwind} className='w-16 h-16'/>
-            </motion.div>
-            
-            <motion.div 
-            variants={iconVarients(2.5)}
-            initial="initial"
-            animate= "animate"
-            className='p-2 border-4 rounded-2xl border-neutral-800'>
-                <img src={postgreSQL} className='w-16 h-16'/>
-            </motion.div>
-
-            <motion.div 
-            variants={iconVarients(2.5)}
-            initial="initial"
-            animate= "animate"
-            className='p-2 border-4 rounded-2xl border-neutral-800'>
-                <img src={Selenium} className='w-16 h-16'/>
-            </motion.div>
-
-            <motion.div 
-            variants={iconVarients(3)}
-            initial="initial"
-            animate= "animate"
-            className='p-2 border-4 rounded-2xl border-neutral-800'>
-                <img src={Postman} className='w-16 h-16'/>
-            </motion.div>
-
-            <motion.div 
-            variants={iconVarients(6)}
-            initial="initial"
-            animate= "animate"
-            className='p-2 border-4 rounded-2xl border-neutral-800'>
-                <img src={JUnit} className='w-16 h-16'/>
-            </motion.div>
-           
+    <section id="technologies" className="py-10 bg-slate-50">
+      <div className="max-w-6xl px-6 mx-auto">
+        <div className="mb-6 text-center">
+          <h2 className="text-2xl font-semibold md:text-3xl text-slate-900">Technologies</h2>
+          <p className="mt-1 text-sm text-slate-600">Tools and technologies I work with regularly</p>
         </div>
 
-    </div>
-  )
-}
+        <div className="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-6 md:gap-6">
+          {techs.map((t, idx) => (
+            <motion.div
+              key={t.name}
+              custom={idx}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={cardVariants}
+              whileHover={{ scale: 1.06, zIndex: 5 }}
+              className="flex flex-col items-center p-3 transition bg-white border rounded-lg shadow-sm border-slate-100 hover:shadow-md"
+              role="img"
+              aria-label={t.alt}
+            >
+              <div className="flex items-center justify-center w-12 h-12 md:w-14 md:h-14">
+                <img src={t.img} alt={t.alt} className="object-contain max-w-full max-h-full" loading="lazy" />
+              </div>
+              <div className="mt-2 text-xs font-medium text-slate-800">{t.name}</div>
+            </motion.div>
+          ))}
+        </div>
 
-export default Technologies
+        <div className="mt-6 text-center">
+          <p className="text-sm text-slate-600">More tools and frameworks available on my resume and GitHub.</p>
+        </div>
+      </div>
+    </section>
+  );
+};
 
+export default Technologies;
